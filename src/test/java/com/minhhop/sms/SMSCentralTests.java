@@ -14,7 +14,7 @@ public class SMSCentralTests {
 
     @Test
     public void testCampaigns() throws IOException {
-        SMS sms = new SMSCentral("giangle@minhhop.net", "pass1wrd", "14519891746185PLeni");
+        SMS sms = new SMSCentral("email", "password", "token");
 //        Campaign.Smart campaign = new Campaign.Smart(sms.campaigns().get("1452853698794FvGTW5"));
 
         Iterator<Campaign> iterable = sms.campaigns().iterate("1").iterator();
@@ -27,7 +27,7 @@ public class SMSCentralTests {
 
     @Test
     public void testCreate() throws IOException {
-        JsonObject object = Json.createObjectBuilder().add("sender_id", "SMSCENTRAL")
+        JsonObject object = Json.createObjectBuilder().add("sender_id", "SenderID")
             .add("type", 1)
             .add("name", "Campaign for 20012015")
             .add("messages",
@@ -39,7 +39,7 @@ public class SMSCentralTests {
             ).build();
 
 
-        SMS sms = new SMSCentral("giangle@minhhop.net", "pass1wrd", "14519891746185PLeni");
+        SMS sms = new SMSCentral("email", "password", "token");
         Campaign.Smart campaign = new Campaign.Smart(sms.campaigns().create(object));
         System.out.println(campaign.json());
     }
