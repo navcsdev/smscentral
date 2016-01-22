@@ -18,6 +18,34 @@ public class Main {
 }
 ```
 
+## How to create a campaign with JSONObject?
+
+```java
+JsonObject object = Json.createObjectBuilder().add("sender_id", "SMSCENTRAL")
+    .add("type", 1)
+    .add("name", "Campaign for 20012015")
+    .add("messages",
+        Json.createArrayBuilder().add(
+            Json.createObjectBuilder()
+                .add("content", "The tin dung HSBC cua quy khac vua thuc hien giao dich nhu sau: XXXXX3952-VND 17300041 on 03/01/2016")
+                .add("receiver", Json.createArrayBuilder().add("0908008726")
+            )
+        )
+    ).build();
+SMS sms = new SMSCentral("<email>", "<password>", "<token>");
+Campaign.Smart campaign = new Campaign.Smart(sms.campaigns().create(object));
+```
+
+## How to create a campaign with Type = CSKH?
+
+## How to schedule a campaign?
+
+## How to create a campaign with Type = QC?
+
+## How to get a campaign with given transaction id?
+
+## How to iterate all campaigns?
+
 
 ## Questions?
 
