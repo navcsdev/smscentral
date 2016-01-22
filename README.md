@@ -1,5 +1,6 @@
 <img src="http://dashboard.smscentral.vn/static/images/smscentral1.png" />
 
+## Object Oriented Wrapper of SMSCentral API
 More details are here: [smscentral.vn](http://smscentral.vn/).
 Java 7 or higher is required.
 
@@ -37,10 +38,29 @@ Campaign.Smart campaign = new Campaign.Smart(sms.campaigns().create(object));
 ```
 
 ## How to create a campaign with Type = CSKH?
+```java
+SMS sms = new SMSCentral("<email>", "<password>", "<token>");
+List<Campaign.Message> messages = new ArrayList<Campaign.Message>();
+messages.add(new Campaign.Message("0908008726", "The tin dung HSBC cua quy khac vua thuc hien giao dich nhu sau: XXXXX3952-VND 17300041 on 03/01/2016"));
+Campaign campaign = sms.campaigns().sendCSKH("senderId", messages);
+```
 
 ## How to schedule a campaign?
+```java
+SMS sms = new SMSCentral("<email>", "<password>", "<token>");
+List<Campaign.Message> messages = new ArrayList<Campaign.Message>();
+messages.add(new Campaign.Message("0908008726", "The tin dung HSBC cua quy khac vua thuc hien giao dich nhu sau: XXXXX3952-VND 17300041 on 03/01/2016"));
+Date schedule = DateUtils.addDays(new Date(), 5);
+Campaign campaign = sms.campaigns().sendCSKH("senderId", messages, schedule);
+```
 
 ## How to create a campaign with Type = QC?
+```java
+SMS sms = new SMSCentral("<email>", "<password>", "<token>");
+List<Campaign.Message> messages = new ArrayList<Campaign.Message>();
+messages.add(new Campaign.Message("0908008726", "The tin dung HSBC cua quy khac vua thuc hien giao dich nhu sau: XXXXX3952-VND 17300041 on 03/01/2016"));
+Campaign campaign = sms.campaigns().sendQC("senderId", messages, schedule);
+```
 
 ## How to get a campaign with given transaction id?
 
