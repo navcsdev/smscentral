@@ -4,7 +4,7 @@ More details are here: [smscentral.vn](http://smscentral.vn/).
 Java 7 or higher is required.
 
 Set of classes in `com.minhhop.sms` package is
-an object oriented API of Github:
+an object oriented API of SMSCentral:
 
 ```java
 public class Main {
