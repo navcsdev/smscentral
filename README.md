@@ -19,6 +19,27 @@ public class Main {
 }
 ```
 
+# How to use (Maven)
+- Add the following snippet to any project's pom that depends on your project
+```xml
+  <repository>
+      <id>smscentral-mvn-repo</id>
+      <url>https://raw.github.com/minhhoptech/smscentral/mvn-repo/</url>
+      <snapshots>
+          <enabled>true</enabled>
+          <updatePolicy>always</updatePolicy>
+      </snapshots>
+  </repository>
+```
+- The dependency you need is
+```xml
+  <dependency>
+            <groupId>com.minhhop.sms</groupId>
+            <artifactId>smscentral</artifactId>
+            <version>1.0-SNAPSHOT</version>
+  </dependency>
+```
+
 ## How to create a campaign with JSONObject?
 
 ```java

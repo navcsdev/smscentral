@@ -26,7 +26,7 @@ import lombok.EqualsAndHashCode;
  */
 @Immutable
 @Loggable(Loggable.DEBUG)
-@EqualsAndHashCode(of = { "ghub", "entry" })
+@EqualsAndHashCode(of = { "sms", "entry" })
 public final class RtCampaigns implements Campaigns {
     static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 

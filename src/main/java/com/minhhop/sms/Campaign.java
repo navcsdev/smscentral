@@ -68,7 +68,7 @@ public interface Campaign extends JsonReadable, JsonPatchable, Comparable<Campai
     @Immutable
     @ToString
     @Loggable(Loggable.DEBUG)
-    @EqualsAndHashCode(of = { "repo", "jsn" })
+    @EqualsAndHashCode(of = { "camp", "jsn" })
     final class Smart implements Campaign {
         /**
          * Encapsulated Campaign.
