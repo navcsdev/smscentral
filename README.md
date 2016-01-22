@@ -22,4 +22,4 @@ public class Main {
 ## Questions?
 
 If you have any questions about the framework, or something doesn't work as expected,
-please [submit an issue here](https://github.com/jcabi/jcabi-github/issues/new).
+please [submit an issue here](https://github.com/minhhoptech/smscentral/issues/new).
