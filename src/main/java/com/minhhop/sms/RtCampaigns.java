@@ -117,7 +117,7 @@ public final class RtCampaigns implements Campaigns {
     public Iterable<Campaign> iterate(@NotNull(message = "identifier can't be NULL") String identifier) {
         return new RtPagination<Campaign>(
                 this.entry.uri().path("/1.0/campaigns").queryParam("page", identifier).back(),
-                new RtValuePagination.Mapping<Campaign, JsonObject>() {
+                 new RtValuePagination.Mapping<Campaign, JsonObject>() {
                     @Override
                     public Campaign map(final JsonObject object) {
                         return RtCampaigns.this.get(

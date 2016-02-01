@@ -125,7 +125,6 @@ public interface Campaign extends JsonReadable, JsonPatchable, Comparable<Campai
 
         @Override
         public void patch(@NotNull(message = "JSON is never NULL") JsonObject json) throws IOException {
-
         }
 
         @Override

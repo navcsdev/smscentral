@@ -2,6 +2,7 @@ package com.minhhop.sms;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import netscape.javascript.JSObject;
 
 import javax.json.JsonNumber;
 import javax.json.JsonObject;
@@ -65,8 +66,7 @@ final class SmartJson {
      * @return Value
      * @throws IOException If there is any I/O problem
      */
-    public <T> T value(final String name, final Class<T> type)
-            throws IOException {
+    public <T> T value(final String name, final Class<T> type) throws IOException {
         final JsonObject json = this.object.json();
         if (!json.containsKey(name)) {
             throw new IllegalStateException(

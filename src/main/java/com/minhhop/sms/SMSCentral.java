@@ -29,7 +29,7 @@ public final class SMSCentral implements SMS {
      * Default request to start with.
      */
     private static final Request REQUEST =
-            new ApacheRequest("http://api.smscentral.vn")
+            new ApacheRequest("http://localhost:8085/smscentral-api/")
                     .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
                     .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON);
 
@@ -95,6 +95,10 @@ public final class SMSCentral implements SMS {
     public Campaigns campaigns() {
         return new RtCampaigns(this, this.request);
     }
+
+    @Override
+    @NotNull(message = "request can't be NULL")
+    public Reports reports() { return new RtReports(this, this.request); }
 
     public String token() {
         return this.token;

@@ -26,14 +26,18 @@ public interface SMS {
      */
     @NotNull(message = "request is never NULL")
     Request entry();
-
     /**
      * Get campaigns.
      * @return Campaigns
      */
     @NotNull(message = "list of campaigns is never NULL")
     Campaigns campaigns();
-
+    /**
+     * Get reports
+     * @return Reports
+     */
+    @NotNull(message = "list if reports is never NULL")
+    Reports reports();
     /**
      * API token
      * @return API token

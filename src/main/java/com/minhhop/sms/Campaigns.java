@@ -74,6 +74,9 @@ public interface Campaigns {
     @NotNull(message = "Campaign is never NULL")
     Campaign get(@NotNull(message = "coordinates can't be NULL") String id);
 
+
+
+
     /**
      * Iterate all public campaigns, starting with the one you've seen already.
      * @param identifier The integer ID of the last Campaign that you’ve seen.
